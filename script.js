@@ -13,7 +13,7 @@
 		element = document.createElement(elements[++elementsIndex]);
 	}
 
-	element.innerHTML = 'x<style>' +
+	element.innerHTML = '<style>' +
 		'article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}' +
 		'audio[controls],canvas,video{display:inline-block}' +
 		'[hidden],audio{display:none}' +
@@ -82,7 +82,7 @@ function parseFloatHTML(element) {
 }
 
 function parsePrice(number) {
-	return number.toFixed(2).replace(/(\d)(?=(\d\d\d)+([^\d]|kr))/g, '1 ');
+	return number.toFixed(2).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
 }
 
 /* Update Number
@@ -127,7 +127,7 @@ function updateInvoice() {
 		total += price;
 
 		// set row total
-		cells[4].innerHTML = price;
+		cells[4].innerHTML = parsePrice(price);
 	}
 
 	// update balance cells
