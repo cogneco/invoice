@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Faktura</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="base.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="license" href="http://www.opensource.org/licenses/mit-license/">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Faktura</h1>
+			<section id="logotype"><img alt="" src="cogneco-v3b.svg"><input type="file" accept="image/*"></section>
+			<section id="number">
+				<h1>Fakturanr</h1>
+				<p contenteditable>1000</p>
+			</section>
+			<section id="date">
+				<h1>Fakturadatum</h1>
+				<p contenteditable>2017-07-01</p>
+			</section>
+			<section id="address">
+				<h1>Fakturaadress</h1>
+				<address contenteditable>
+					<p>Acme AB<br>Huvudgatan 1<br>123 56 Någonstans<br>Sverige</p>
+				</address>
+			</section>
+		</header>
+		<main>
+			<section id="details">
+				<dl>
+					<dt>Er referens</dt>
+					<dd><span contenteditable></span></dd>
+					<dt>Vår referens</dt>
+					<dd><span contenteditable>Simon Mika</span></dd>
+					<dt>Betalningsvillkor</dt>
+					<dd><span class="unit">dagar netto</span><span contenteditable>30</span></dd>
+					<dt>Förfallodag</dt>
+					<dd><span contenteditable>2017-08-01</span></dd>
+					<dt>Dröjsmålsränta</dt>
+					<dd><span class="unit">%</span><span contenteditable>9.5</span></dd>
+				</dl>
+			</section>
+			<section id="inventory">
+				<table>
+					<thead>
+						<tr>
+							<th><span>Benämning</span></th>
+							<th><span>Beskrivning</span></th>
+							<th><span>À-pris</span></th>
+							<th><span>Antal</span></th>
+							<th><span>Summa</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a class="cut">-</a><span contenteditable>Front End Consultation</span></td>
+							<td><span contenteditable>Experience Review</span></td>
+							<td><span data-prefix>kr</span><span contenteditable>1250.00</span></td>
+							<td><span class="unit" contenteditable>h</span><span contenteditable>4</span></td>
+							<td><span data-prefix>kr</span><span>600.00</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<a class="add">+</a>
+			</section>
+		</main>
+		<footer>
+			<section id="balance">
+				<table>
+					<tr>
+						<th><span>Exkl. moms</span></th>
+						<td><span data-prefix>kr</span><span>600.00</span></td>
+					</tr>
+					<tr>
+						<th><span>Momssats</span></th>
+						<td><span class="unit">%</span><span contenteditable>25</span></td>
+					</tr>
+					<tr>
+						<th><span contenteditable>Moms</span></th>
+						<td><span data-prefix>kr</span><span>0.00</span></td>
+					</tr>
+					<tr>
+						<th><span contenteditable>Att betala</span></th>
+						<td><span id="prefix" contenteditable>kr</span><span>600.00</span></td>
+					</tr>
+				</table>
+			</section>
+			<aside contenteditable>
+				<p>Överför betalningen till bankkonto: Handelsbanken 6513-731 049 438.<br>Ange fakturanummer som meddelande (ej OCR).</p>
+			</aside>
+			<footer>
+				<table>
+					<tr>
+						<th>Adress</th>
+						<th>Organisationsnr</th>
+						<th>Webbsida</th>
+					</tr>
+					<tr>
+						<td rowspan="3">
+							<address contenteditable>
+								<p>Tegelgatan 29<br>752 39 Uppsala<br>Sverige</p>
+							</address>
+						</td>
+						<td contenteditable>556916-4965</td>
+						<td contenteditable>cogneco.com</td>
+					</tr>
+					<tr>
+						<td contenteditable></td>
+						<th>Mejl</th>
+					</tr>
+						<td contenteditable>Godkänd för F-skatt</td>
+						<td contenteditable>info@cogneco.com</td>
+					</tr>
+				</table>
+			<footer>
+		</footer>
+	</body>
+</html>
